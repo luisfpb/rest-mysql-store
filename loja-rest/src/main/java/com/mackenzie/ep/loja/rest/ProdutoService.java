@@ -18,7 +18,7 @@ public class ProdutoService {
 
 	@GET
 	@Path("/Produtos")
-	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getProdutos() {
 		ProdutoDao produtodao = new ProdutoDao();
 		Produtos produtos = produtodao.getProdutos();
@@ -27,7 +27,7 @@ public class ProdutoService {
 
 	@GET
 	@Path("/Produto/{id}")
-	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getProduto(@PathParam("id") int idProduto) {
 		ProdutoDao produtodao = new ProdutoDao();
 		Produto produto = produtodao.getProduto(idProduto);
